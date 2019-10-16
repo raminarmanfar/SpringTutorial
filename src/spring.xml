@@ -3,10 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="triangle" class="org.ramin.javabrains.Triangle">
-        <property name="pointA" ref="point1"/>
-        <property name="pointB" ref="point2"/>
-        <property name="pointC" ref="point3"/>
+    <bean id="triangle" name="triangle-name" class="org.ramin.javabrains.Triangle">
+        <property name="points">
+            <list>
+                <ref bean="point1"/>
+                <ref bean="point2"/>
+                <ref bean="point3"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="point1" class="org.ramin.javabrains.Point">
@@ -23,4 +27,6 @@
         <property name="x" value="0"/>
         <property name="y" value="20"/>
     </bean>
+
+    <alias name="triangle" alias="triangle-alias"/>
 </beans>

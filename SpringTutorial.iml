@@ -5,6 +5,7 @@
       <configuration>
         <fileset id="fileset" name="Spring.mxl" removed="false">
           <file>file://$MODULE_DIR$/spring.mxl.xml</file>
+          <file>file://$MODULE_DIR$/src/spring.xml</file>
         </fileset>
         <fileset id="fileset2" name="Spring" removed="false">
           <file>file://$MODULE_DIR$/spring.xml</file>
